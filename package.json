@@ -1,0 +1,48 @@
+{
+  "name": "@frondjs/dev-server",
+  "version": "0.1.1",
+  "description": "FrondJS development server.",
+  "author": {
+    "name": "Murat Gözel",
+    "email": "murat@gozel.com.tr",
+    "url": "https://muratgozel.com.tr"
+  },
+  "funding": {
+    "type": "ko-fi",
+    "url": "https://ko-fi.com/muratgozel"
+  },
+  "license": "MIT",
+  "homepage": "https://github.com/frondjs/dev-server#readme",
+  "main": "index.js",
+  "bin": {
+    "frond-dev-server": "./index.js"
+  },
+  "scripts": {
+    "commit": "node devops/commit.js commit",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "bugs": {
+    "url": "https://github.com/frondjs/dev-server/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/frondjs/dev-server.git"
+  },
+  "dependencies": {
+    "automerge": "^0.14.2",
+    "chokidar": "^3.5.1",
+    "gun": "^0.2020.520",
+    "mime": "^2.4.7",
+    "ws": "^7.4.2",
+    "yargs": "^16.2.0"
+  },
+  "devDependencies": {
+    "colors": "^1.4.0",
+    "semver": "^7.3.4"
+  },
+  "keywords": [
+    "dev-server",
+    "frondjs",
+    "framework"
+  ]
+}
