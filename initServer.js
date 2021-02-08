@@ -1,3 +1,4 @@
+const os = require('os')
 const {execSync} = require('child_process')
 const http = require('http')
 const fs = require('fs')
@@ -10,7 +11,7 @@ const Automerge = require('automerge')
 module.exports = function createServer({port, watch, silent, publicpath, ctx}) {
   // get update count from automerge
   const dbname = ctx.project.name + '-db.json'
-  const dbpath = path.join('~/.frondjs', dbname)
+  const dbpath = path.join(os.homedir(), '.frondjs', dbname)
   const db = fs.existsSync(dbpath) ? fs.readFileSync(dbpath, 'utf8') : null
   let doc = db
     ? Automerge.load(db)
