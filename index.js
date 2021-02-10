@@ -47,6 +47,12 @@ require('yargs')
       default: false,
       describe: 'The app will rebuild itself on codebase change if set.'
     })
+
+    yargs.positional('watchpaths', {
+      type: 'string',
+      default: 'app',
+      describe: 'Comma seperated path names to watch.'
+    })
   }, function (argv) {
     require('./initServer')(argv)
   })

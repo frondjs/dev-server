@@ -8,7 +8,7 @@ const chokidar = require('chokidar')
 const WebSocket = require('ws')
 const Automerge = require('automerge')
 
-module.exports = function createServer({port, watch, silent, publicpath, ctx}) {
+module.exports = function createServer({port, watch, silent, publicpath, watchpaths, ctx}) {
   // get update count from automerge
   const dbname = ctx.project.name + '-db.json'
   const dbpath = path.join(os.homedir(), '.frondjs', dbname)
@@ -93,7 +93,7 @@ to send a message to the client.', e.message)
 
     // watch
     if (watch) {
-      const watchPaths = ['src', 'modules/frond']
+      const watchPaths = watchpaths.split(',')
       const watcher = chokidar.watch(
         watchPaths.map(p => path.join(ctx.project.path, p, '/**')),
         {
