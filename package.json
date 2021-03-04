@@ -1,6 +1,6 @@
 {
   "name": "@frondjs/dev-server",
-  "version": "0.1.6",
+  "version": "0.1.7",
   "description": "FrondJS development server.",
   "author": {
     "name": "Murat Gözel",
@@ -31,7 +31,6 @@
   "dependencies": {
     "automerge": "^0.14.2",
     "chokidar": "^3.5.1",
-    "gun": "^0.2020.520",
     "mime": "^2.4.7",
     "ws": "^7.4.2",
     "yargs": "^16.2.0"
