@@ -1,6 +1,6 @@
 {
   "name": "@frondjs/dev-server",
-  "version": "0.1.7",
+  "version": "0.1.8",
   "description": "FrondJS development server.",
   "author": {
     "name": "Murat Gözel",

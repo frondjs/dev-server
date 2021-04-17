@@ -39,7 +39,7 @@ to send a message to the client.', e.message)
     websocket = ws
   })
 
-  const reDirectoryMatch = /.\.[a-zA-Z0-9]{1,4}$/
+  const reDirectoryMatch = /.\.[a-zA-Z0-9]{1,5}$/
   const server = http.createServer(function(request, response) {
     if (!silent) console.log(`🌍 ${request.method}: ${request.url}`)
 
