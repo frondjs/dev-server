@@ -111,8 +111,9 @@ to send a message to the client.', e.message)
         const relpath = path.relative(ctx.project.path, fullpath)
         if (!silent) console.log(`🔎 Change detected. ${relpath} Rebuilding app...`)
 
+        const env = process.env.NODE_ENV || 'development'
         const cmd = [
-          `NODE_ENV=development cd ${ctx.project.path}`,
+          `NODE_ENV=${env} cd ${ctx.project.path}`,
           `npm run build`
         ]
         execSync(cmd.join(' && '))
